@@ -23,3 +23,6 @@ exit（）
 ![](./image/hello.png)
 
 
+git add .  
+git commit -m '第一个python程序'  
+git push  
