@@ -12,13 +12,13 @@
 ![](./image/运行成功.png)
 
 ## 运行第一个程序
-在终端输入 print "Hello，World" 
-系统会出现 Hello，World
-exit（）
-这样是算运行第一个程序
-但是唯一的一个缺点就是我们没有保存下来，下次输入还得重新做。
-我们可以在MarkDown里写下print "Hello，World"再把它命名为 hello.py
-首先我们在git bash.exe找到我们hello.py保存的所在目录，然后我们输入python hello.py
+在终端输入 print "Hello，World"   
+系统会出现 Hello，World  
+exit（）  
+这样是算运行第一个程序  
+但是唯一的一个缺点就是我们没有保存下来，下次输入还得重新做。  
+我们可以在MarkDown里写下print "Hello，World"再把它命名为 hello.py  
+首先我们在git bash.exe找到我们hello.py保存的所在目录，然后我们输入python hello.py  
 
 ![](./image/hello.png)
 
