@@ -1,0 +1,1 @@
+print "ni shi wo de nai cha"
