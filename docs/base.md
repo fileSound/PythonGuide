@@ -209,13 +209,107 @@ print L
 
 可以理解为等号左边为L，是变量，等号右边为变量的值。
 * 由于Python是动态语言，所以list中包含的元素并不要求都必须是同一种数据类型，我们完全可以在list中包含各种数据：
-```
+```python
 >>> L = ['Michael', 100, True]
 ```
 一个元素也没有的list，就是空list：
-```
+```python
 >>> empty_list = []
 ```
+
+## Python按照索引访问list
+由于list是一个有序组合，可以用List按照分数从高到低表示班里的三个同学：
+```python
+L=['Adam','Lisa','Bart']
+```
+那我们如何从list获取指定的第N名同学，可以通过索引来获取list中的指定元素。
+
+**需要特别注意的是，索引从0开始，也就是说，第一个元素的索引是0，第二个元素的索引是1，以此类推。**
+
+因此，要打印第一个同学的名字用L[0]:
+```python
+>>>print L[0]
+Adam
+```
+要打印第二个同学的名字用L[1]:
+```python
+>>>print L[1]
+Lisa
+```
+要打印第三个同学的名字用L[2]:
+```python
+>>>print L[2]
+Bart
+```
+要打印第四个同学的名字用L[3]:
+```python
+>>>print L[3]
+Traceback (most recent call last):
+  File "index.py", line 5, in print L[3]
+IndexError: list index out of range
+```
+报错了！IndexError意思就是索引超出了范围，因为上面的list只有3个元素，有效的索引是 0，1，2。
+
+**所以，使用索引时，千万注意不要越界。**
+
+Python之倒序访问list
+还用list按分数从高到低表示出班里的三个同学：
+```python
+L=['Adam','Lisa','Bart']
+```
+这时，老师说，请分数最低的同学站出来，
+要写代码完成这个任务，我们可以先数一数这个 list，发现它包含3个元素，因此，最后一个元素的索引是2：
+```python
+print L[2]
+Bart
+```
+用另外一种方法：Bart同学是最后一名，俗称倒数第一，所以，我们可以用 -1 这个索引来表示最后一个元素：
+```python
+print L[-1]
+Bart
+```
+类似的，倒数第二用 -2 表示，倒数第三用 -3 表示，倒数第四用 -4 表示：
+```python
+print L[-2]
+Lisa
+print L[-3]
+Adam
+print L[-4]
+Traceback (most recent call last):
+  File "index.py", line 5, in 
+    print L[-4]
+IndexError: list index out of range
+59
+85
+95.5
+L[-4] 报错了，因为倒数第四不存在，一共只有3个元素。
+```
+
+**使用倒序索引时，也要注意不要越界。**
+
+#Python之添加新元素
+现在，班里有3名同学：
+```python
+L=['Adam','Lisa','Bart']
+```
+今天，班里转来一名新同学Paul，如何把新同学添加到其中？
+第一个办法是用list的 **append( )** 方法，把新同学加到末尾：
+```python
+L=['Adam','Lisa','Bart']
+L.append('Paul')
+print L
+['Adam','Lisa','Bart','Paul']
+```
+append()总是把新的元素添加到list的尾部。
+如果Paul同学表示自己总是考满分，是第一名，这时候该怎么办？
+方法是用list的 **insert（）**方法，它接受两个参数，第一个是索引号，第二个参数是待添加的新元素：
+```python
+L=['Adam','Lisa','Bart']
+L.insert(0,'Paul')
+print L
+['Paul','Adam','Lisa','Bart']
+L.insert(0,'Paul')的意思是，'Paul'将被添加到索引上（也就是第一个），而原来索引为0的Adam同学上的所有同学，自动向后移动一位。
+
 
 
 
